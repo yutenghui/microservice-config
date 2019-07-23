@@ -1,5 +1,5 @@
 server:
-  port: 7006
+  port: 9102
 spring:
   application:
     name: microservice-gateway
@@ -12,6 +12,6 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:7001/eureka
+      defaultZone: http://localhost:9101/eureka
   instance:
     hostname: localhost
