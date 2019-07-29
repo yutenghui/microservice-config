@@ -16,5 +16,5 @@ eureka:
     hostname: localhost
 jwt:
   config:
-    key: qpwoeirutyalskdjfhgzmxncvb123
+    key: qpwoeirutyalskdjfhgzmxncvb
     ttl: 60000
