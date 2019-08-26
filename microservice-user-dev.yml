@@ -10,5 +10,5 @@ spring:
     password: yth13081606618
 jwt:
   config:
-    key: qpwoeirutyalskdjfhgzmxncvb123456
+    key: qpwoeirutyalskdjfhgzmxncvb123456789
     ttl: 60000
