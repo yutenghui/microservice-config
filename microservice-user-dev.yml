@@ -3,17 +3,29 @@ server:
 spring:
   application:
     name: microservice-user
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: 192.168.1.76:9092         #Kafka的消息中间件服务器
+          auto-create-topics: true        #如果设置为false,就不会自动创建Topic
+      bindings:
+        userChangeInput:
+          destination: userTopic
+          group: im
+    bus:
+      refresh:
+        enabled: true
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://192.168.1.76:9411
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/wechat?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+    url: jdbc:mysql://localhost:3306/weixin?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
     username: root
     password: yth13081606618
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:9101/eureka
-  instance:
-    hostname: localhost
 jwt:
   config:
     key: qpwoeirutyalskdjfhgzmxncvb123456
