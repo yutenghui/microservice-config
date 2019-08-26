@@ -1,8 +1,8 @@
 server:
-  port: 9114
+  port: 9104
 spring:
   application:
-    name: microservice-user
+    name: microservice-im
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/weixin?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
