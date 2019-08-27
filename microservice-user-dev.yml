@@ -3,6 +3,11 @@ server:
 spring:
   application:
     name: microservice-user
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/weixin?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+    username: root
+    password: yth13081606618
   cloud:
     stream:
       kafka:
@@ -21,11 +26,6 @@ spring:
       probability: 1.0
   zipkin:
     base-url: http://192.168.1.76:9411
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/weixin?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
-    username: root
-    password: yth13081606618
 jwt:
   config:
     key: qpwoeirutyalskdjfhgzmxncvb123456789
