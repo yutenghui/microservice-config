@@ -30,3 +30,8 @@ jwt:
   config:
     key: qpwoeirutyalskdjfhgzmxncvb123456789
     ttl: 60000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
